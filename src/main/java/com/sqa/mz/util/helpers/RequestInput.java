@@ -180,16 +180,28 @@ public class RequestInput {
 	}
 
 	// Get a String from the user, must be an acceptable value
-	public static String getString(String question, String... s) {
-		String input;
+	public static String getString(String question, String... acceptableWords) {
+		String input = null;
 		String resultValue;
+		boolean validWord = false;
 		scanner = new Scanner(System.in);
-		System.out.print(question);
-		input = scanner.nextLine();
-		resultValue = input;
-		// scanner.close();
+		while (true) {
+			try {
+				System.out.print(question);
+				input = scanner.nextLine();
+				resultValue = input;
+				for (int i = 0; i < acceptableWords.length; i++) {
+					if (resultValue.trim().replace(" ", "").equalsIgnoreCase(acceptableWords[i])) {
+						validWord = true;
+					}
 
-		return resultValue;
-
-	}
+				}
+				if (!validWord) {
+					throw new InvalidAcceptableWordException();
+				}
+				return resultValue;
+			} catch (InvalidAcceptableWordException e) {
+				System.out.println("you have not provided valid word " + input);
+			}
+		}
 }
