@@ -179,6 +179,19 @@ public class RequestInput {
 
 	}
 
+	public static String getString(String question) {
+		// Local variable to hold temporary number
+		String input;
+		scanner = new Scanner(System.in);
+		// Ask the user a question to get relative input
+		System.out.print(question);
+		// Set the number based on what the user enters on their
+		// keyboard
+		input = scanner.nextLine();
+		// Return input user has entered
+		return input;
+	}
+
 	// Get a String from the user, must be an acceptable value
 	public static String getString(String question, String... acceptableWords) {
 		String input = null;
@@ -204,4 +217,5 @@ public class RequestInput {
 				System.out.println("you have not provided valid word " + input);
 			}
 		}
+	}
 }
