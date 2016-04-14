@@ -47,13 +47,13 @@ public class DisplayTest {
 	}
 
 	@Test
-	public void adisplay2DArray() {
+	public void adisplay2DArray1() {
 		int[][] matrix = { { 1, 2, 3, 4 }, { 11, 22, 33, 44 }, { 111, 222, 333, 444, 555 } };
 		matrix = Display.display2DArray(matrix);
 	}
 
 	@Test
-	public void displayArrayTest() {
+	public void displayArrayTest1() {
 		int array[] = { 1, 2, 3, 4, 5 };
 		array = Display.displayArray(array);
 	}

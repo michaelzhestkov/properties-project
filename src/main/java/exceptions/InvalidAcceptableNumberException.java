@@ -1,17 +1,17 @@
 /**
- *   File Name: InvalidAcceptableWordException.java<br>
+ *   File Name: invalidAcceptableNumberException.java<br>
  *
  *   Zhestkov, Michael<br>
  *   Java Boot Camp Exercise<br>
  *   Instructor: Jean-francois Nepton<br>
- *   Created: Mar 31, 2016
+ *   Created: Mar 30, 2016
  *   
  */
 
-package com.sqa.mz.util.helpers;
+package exceptions;
 
 /**
- * InvalidAcceptableWordException //ADDD (description of class)
+ * invalidAcceptableNumberException //ADDD (description of class)
  * <p>
  * //ADDD (description of core fields)
  * <p>
@@ -22,6 +22,6 @@ package com.sqa.mz.util.helpers;
  * @since       1.0
  *
  */
-public class InvalidAcceptableWordException extends Exception {
+public class InvalidAcceptableNumberException extends Exception {
 
 }

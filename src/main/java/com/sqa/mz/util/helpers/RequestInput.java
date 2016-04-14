@@ -12,6 +12,8 @@ package com.sqa.mz.util.helpers;
 
 import java.util.*;
 
+import exceptions.*;
+
 public class RequestInput {
 
 	private static Scanner scanner;
