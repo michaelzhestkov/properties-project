@@ -35,7 +35,7 @@ public class MyMath {
 		}
 	}
 
-	// A static method which multiplies a set of numbers
+	// A static method which multiplies a set of numbers.
 	public static double multNumbers(double... nums) {
 		double result = 1;
 		Double[] numbers = new Double[nums.length];
@@ -49,9 +49,9 @@ public class MyMath {
 	public static double powerNumber(double number, double power) {
 		// Create a variable to hold to final result and setting it to power of
 		// 1
-		double result;
+		double result = 1;
 		if (power > 1) {
-			result = 1;
+			// result = 1;
 			for (int i = 0; i < power; i++) {
 				result *= number;
 			}
@@ -59,7 +59,7 @@ public class MyMath {
 			result = number;
 		} else {
 			System.out.println("Power is 0 or below, returning 0");
-			result = 0;
+			// result = 0;
 		}
 		return result;
 	}

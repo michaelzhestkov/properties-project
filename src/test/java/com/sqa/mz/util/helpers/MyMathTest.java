@@ -11,6 +11,9 @@
 package com.sqa.mz.util.helpers;
 
 import org.junit.*;
+import org.junit.runner.*;
+import org.junit.runners.*;
+import org.junit.runners.Parameterized.*;
 
 /**
  * MyMathTest //ADDD (description of class)
@@ -24,9 +27,31 @@ import org.junit.*;
  * @since 1.0
  *
  */
+@RunWith(Parameterized.class)
 public class MyMathTest {
 
+	@Parameters
+	public static Object[][] getData() {
+		Object[][] data = { { 2.0, 2.0, 4.0 }, { 5.0, 2.0, 25.0 }, { 4.0, 3.0, 64.0 }, { 1.0, 0.0, 1.0 },
+				{ 3.0, 1.0, 3.0 }, { 2.0, 1.5, 4.0 } };
+		return data;
+	}
+
+	private double expectedResult;
+
+	private double num;
+
+	private double power;
+
+	public MyMathTest(double num, double power, double expectedResult) {
+		super();
+		this.expectedResult = expectedResult;
+		this.num = num;
+		this.power = power;
+	}
+
 	@Test
+	@Ignore
 	public void testDivideNumbers() {
 		double result;
 		double num1 = 10;
@@ -36,6 +61,7 @@ public class MyMathTest {
 	}
 
 	@Test
+	@Ignore
 	public void testHasCleanDivision() {
 		boolean result;
 		double num1 = 10;
@@ -45,14 +71,16 @@ public class MyMathTest {
 	}
 
 	@Test
+	@Ignore
 	public void testMultNumber() {
 
 		double nums = 0;
-		double result = MyMath.multNumbers(2, 2, 2, 2);
+		double result = MyMath.multNumbers(10, 10);
 		System.out.println(String.format("The result of multiplication multiple numbers is %.0f", result));
 	}
 
 	@Test
+	@Ignore
 	public void testMyMathClass() {
 		double result;
 		double addNumber = 10;
@@ -72,15 +100,18 @@ public class MyMathTest {
 
 	@Test
 	public void testPowerNumbers() {
-		double result;
-		double num = 5;
-		double power = 4;
-		result = MyMath.powerNumber(num, power);
-		System.out.println(String.format("The result of %.0f to the " + "power of %.0f is %.0f", num, power, result));
-
+		double actualResult;
+		double expectedResult = this.expectedResult;
+		double num = this.num;
+		double power = this.power;
+		actualResult = MyMath.powerNumber(num, power);
+		String message = String.format("The result of %.0f to the power of %.0f is %.0f", num, power, actualResult);
+		System.out.println(message);
+		Assert.assertEquals(message, expectedResult, actualResult, 0);
 	}
 
 	@Test
+	@Ignore
 	public void testReset() {
 		// double resetNumber = 100;
 		double result;
