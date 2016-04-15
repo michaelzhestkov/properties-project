@@ -8,12 +8,14 @@
  *
  */
 
-package com.sqa.mz.util.helpers;
+package com.sqa.mz.util.helpers.math;
 
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
 import org.junit.runners.Parameterized.*;
+
+import com.sqa.mz.util.helpers.*;
 
 /**
  * MyMathTest //ADDD (description of class)

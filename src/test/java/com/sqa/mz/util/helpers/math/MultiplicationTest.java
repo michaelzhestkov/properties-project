@@ -8,7 +8,7 @@
  *
  */
 
-package com.sqa.mz.util.helpers;
+package com.sqa.mz.util.helpers.math;
 
 import java.util.*;
 
@@ -16,6 +16,8 @@ import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
 import org.junit.runners.Parameterized.*;
+
+import com.sqa.mz.util.helpers.*;
 
 @RunWith(Parameterized.class)
 public class MultiplicationTest {
