@@ -1,13 +1,10 @@
-### Master Branch
+## Java Project
 
-## April, 20 2016
-
-Core working directory
+## April 27, 2016
 
 - Java
 - Maven
-- TestNG
-- Selenium
+- Junit
 - Eclipse
 
 [Michael Zhestkov](mailto:michaelzhestkov@gmail.com)
