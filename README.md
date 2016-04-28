@@ -1,11 +1,10 @@
-### Java Basic Project
+### Properties Project
 
-## April 20, 2016
+## April 27, 2016
 
 - Java
 - Maven
-- TestNG
-- Selenium
+- Junit
 - Eclipse
 
 [Michael Zhestkov](mailto:michaelzhestkov@gmail.com)
